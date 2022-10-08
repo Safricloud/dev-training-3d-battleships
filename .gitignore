@@ -128,5 +128,5 @@ dist
 
 .vscode/
 
-js/*.js
+public/js/*.*
 local_modules/
