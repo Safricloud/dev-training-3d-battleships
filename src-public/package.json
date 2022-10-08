@@ -8,5 +8,6 @@
     "watch": "tsc -w"
   },
   "dependencies": {
+    "socket.io-client": "^4.5.2"
   }
 }

@@ -10,4 +10,4 @@ const main = () => {
     console.log(game);
 };
 
-main();
+window.onload = main;
