@@ -1,3 +1,4 @@
-import { io } from "../node_modules/socket.io-client/build/esm/index.js";
+import { io } from "socket.io-client";
 const socket = io();
+export { socket };
 //# sourceMappingURL=main.js.map

@@ -1,7 +1,19 @@
-const { Server } = require("socket.io");
+const { Server } = require('socket.io');
 
-const io = new Server({
-  serveClient: false
-});
+module.exports = function (httpServer: any) {
+    const io = new Server(httpServer, {
+        /* options */
+        serveClient: false,
+    });
 
-module.exports = io;
+    io.on('connection', (socket: any) => {
+        console.log('a user connected');
+        socket.on('disconnect', () => {
+            console.log('user disconnected');
+        });
+    });
+
+
+
+    return io;
+}
